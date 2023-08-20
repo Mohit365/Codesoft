@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="LEVEL_TASK_2.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">MOHIT KUMAR JHA</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">MOHIT KUMAR JHA</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="Resource/Untitled design.png" alt="Mohit kumar jha profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">MOHIT KUMAR JHA</h1>
+        <p class="section__text__p2">Frontend Developer</p>
+        <div class="btn-container">
+          <button 
+            class="btn btn-color-2">
+            <a href="Resource/MOHIT_resume.pdf" target="blank">Download CV</a> 
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+           <a href="https://www.linkedin.com/in/mohit-kumar-b28867229" target="blank"><img
+            src="data:image/png;base64,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"
+            alt="My LinkedIn profile" class="icon"</img></a>
+
+         <a href="https://github.com/Mohit365" target="_blank"><img
+            src="data:image/png;base64,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"
+            alt="My Github profile"
+            class="icon"/></a> 
+        </div>
+      </div>
+    </section>
+    <section id="about" style="margin: 180px;">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="Resource/pic 2.0.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="text-container">
+            <p>
+              Hello everyone, I am Mohit a web developer who loves to create and beautify websites. I love making new websites which are easy to use and can be accessed by anyone. I love to have my clients happy with the site’s performance, which they are able to see on their personal devices. Apart from this, I have also worked in several renowned companies from around the world. I hope I get the opportunity to work in your esteemed organization. That’s all from my side. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="Resource/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="Resource/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="Resource/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="Resource/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Javascript</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Programming Languages</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="Resource/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="Resource/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="Resource/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="Resource/project1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="Resource/Project2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="Resource/project 3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="Resource/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="Resource/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">mohit.kr607@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="Resource/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 MOHIT KUMAR JHA. All Rights Reserved.</p>
+    </footer>
+    <script src="LEVEL_TASK_2.js"></script>
+  </body>
+</html>
